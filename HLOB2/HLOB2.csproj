@@ -1,0 +1,890 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B272514-B832-4ED7-813A-161C8F2FF39C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HLOB2</RootNamespace>
+    <AssemblyName>HLOB2</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.51116.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Bright.WebControls, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Telerik.Web.UI, Version=2011.1.519.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="App_Data\BazaHLOB.mdb" />
+    <Content Include="App_Data\Test.mdb" />
+    <Content Include="Extensions\ThumbViewerDemo\bar.gif" />
+    <Content Include="Extensions\ThumbViewerDemo\bin\Bright.WebControls.dll" />
+    <Content Include="Extensions\ThumbViewerDemo\Default.aspx" />
+    <Content Include="Extensions\ThumbViewerDemo\images\GoodluckdearLiza.gif" />
+    <Content Include="Extensions\ThumbViewerDemo\images\Scissors.jpg" />
+    <Content Include="Extensions\ThumbViewerDemo\images\SingerOilSpout.jpg" />
+    <Content Include="Extensions\ThumbViewerDemo\styles.css" />
+    <Content Include="Extensions\ThumbViewerDemo\thumbs\Scissors.jpg" />
+    <Content Include="Images\Admin.gif" />
+    <Content Include="Images\admin2.gif" />
+    <Content Include="Images\Administrator.gif" />
+    <Content Include="Images\asc.gif" />
+    <Content Include="Images\bullet-point.gif" />
+    <Content Include="Images\buttonSave.PNG" />
+    <Content Include="Images\close.gif" />
+    <Content Include="Images\delete.gif" />
+    <Content Include="Images\desc.gif" />
+    <Content Include="Images\OEE_paski\blue.png" />
+    <Content Include="Images\OEE_paski\green.png" />
+    <Content Include="Images\OEE_paski\red.png" />
+    <Content Include="Images\OEE_paski\shaded-blue-half.png" />
+    <Content Include="Images\OEE_paski\shaded-blue2-half.png" />
+    <Content Include="Images\OEE_paski\shaded-fiolet-half.png" />
+    <Content Include="Images\OEE_paski\shaded-green-half.png" />
+    <Content Include="Images\OEE_paski\shaded-green.png" />
+    <Content Include="Images\OEE_paski\shaded-green2-half.png" />
+    <Content Include="Images\OEE_paski\shaded-red-half.png" />
+    <Content Include="Images\OEE_paski\shaded-yellow-half.png" />
+    <Content Include="Images\OEE_paski\yellow.png" />
+    <Content Include="Images\action_check.gif" />
+    <Content Include="Images\raport.png" />
+    <Content Include="Images\raport2.png" />
+    <Content Include="Images\testy\add.gif" />
+    <Content Include="Images\testy\empty.gif" />
+    <Content Include="Images\testy\fill.gif" />
+    <Content Include="Images\testy\get.gif" />
+    <Content Include="Images\testy\minus.gif" />
+    <Content Include="Images\testy\set.gif" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\loading4.gif" />
+    <Content Include="Images\Logo.gif" />
+    <Content Include="Images\ok.gif" />
+    <Content Include="Images\select.gif" />
+    <Content Include="Images\stronawbudowie.gif" />
+    <Content Include="Images\warning.gif" />
+    <Content Include="Scripts\testy\jsProgressBarHandler.js" />
+    <Content Include="Scripts\testy\prototype.js" />
+    <Content Include="Scripts\WydzialAdiustacji\OEE.js" />
+    <Content Include="Styles\WydzialAdiustacji\OEE.css" />
+    <Content Include="Styles\WydzialAdiustacji\Realizacja.css" />
+    <Content Include="Views\Admin\Operacje\jquery-1.4.1.min.js" />
+    <Content Include="Styles\Admin.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Styles\OddzialBialystok.css" />
+    <Content Include="Styles\DzialMagazynowITransportu.css" />
+    <Content Include="Styles\DzialSurowcowy.css" />
+    <Content Include="Styles\DzialKontroliJakosci.css" />
+    <Content Include="Styles\User.css" />
+    <Content Include="Styles\WydzialAdiustacji.css" />
+    <Content Include="Home.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Test\ListView\Select.aspx" />
+    <Content Include="Views\Admin\Gniazda\Gniazda.aspx" />
+    <Content Include="Views\Admin\Operacje\AjaxCallendar.aspx" />
+    <Content Include="Views\Admin\Operacje\GeneratorSerii.aspx" />
+    <Content Include="Views\Admin\Operacje\Kodowanie_hasel.aspx" />
+    <Content Include="Views\Admin\Operacje\OleToSql.aspx" />
+    <Content Include="Views\Admin\Operacje\ProgressBar.htm" />
+    <Content Include="Views\Admin\Operacje\Wydruk.aspx" />
+    <Content Include="Views\Admin\Polprodukty\PolproduktParametr.aspx" />
+    <Content Include="Views\Admin\Polprodukty\Polprodukty.aspx" />
+    <Content Include="Views\Admin\Polprodukty\Specyfikacje.aspx" />
+    <Content Include="Views\Admin\Pracownicy\Pracownicy.aspx" />
+    <Content Include="Views\Admin\Home.aspx" />
+    <Content Include="Views\Admin\Surowce\Specyfikacje.aspx" />
+    <Content Include="Views\Admin\Surowce\Surowce.aspx" />
+    <Content Include="Views\Admin\Surowce\SurowiecParametr.aspx" />
+    <Content Include="Views\DzialKontroliJakosci\Home.aspx" />
+    <Content Include="Views\DzialKontroliJakosci\Polprodukty\Analizy_polproduktow.aspx" />
+    <Content Include="Views\DzialKontroliJakosci\Polprodukty\Dodaj_analize.aspx" />
+    <Content Include="Views\DzialKontroliJakosci\Polprodukty\Lista indeksów.aspx" />
+    <Content Include="Views\DzialKontroliJakosci\Polprodukty\Polprodukty.aspx" />
+    <Content Include="Views\DzialKontroliJakosci\Polprodukty\Specyfikacje.aspx" />
+    <Content Include="Views\DzialKontroliJakosci\Pracownicy\Pracownicy.aspx" />
+    <Content Include="Views\DzialKontroliJakosci\Surowce\Analiza_edycja.aspx" />
+    <Content Include="Views\DzialKontroliJakosci\Surowce\Analiza_podglad.aspx" />
+    <Content Include="Views\DzialKontroliJakosci\Surowce\Analizy_surowcow.aspx" />
+    <Content Include="Views\DzialKontroliJakosci\Surowce\Dodaj_alias.aspx" />
+    <Content Include="Views\DzialKontroliJakosci\Surowce\Dodaj_analize.aspx" />
+    <Content Include="Views\DzialKontroliJakosci\Surowce\Dodaj_indeks.aspx" />
+    <Content Include="Views\DzialKontroliJakosci\Surowce\Lista indeksów.aspx" />
+    <Content Include="Views\DzialKontroliJakosci\Surowce\Specyfikacje.aspx" />
+    <Content Include="Views\DzialKontroliJakosci\Surowce\Test.aspx" />
+    <Content Include="Views\DzialKontroliJakosci\W_budowie.aspx" />
+    <Content Include="Views\DzialMagazynowITransportu\Home.aspx" />
+    <Content Include="Views\MagazynSurowcowy\Home.aspx" />
+    <Content Include="Views\OddzialBialystok\Home.aspx" />
+    <Content Include="Views\User\Home.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Analizy_laboratoryjne\Polprodukty\Analizy_koncowe.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Analizy_laboratoryjne\Polprodukty\Analizy_techniczne.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Analizy_laboratoryjne\Surowce\Analizy_koncowe.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Analizy_laboratoryjne\Surowce\Analizy_techniczne.aspx" />
+    <Content Include="Views\Admin\Polprodukty\PolproduktBOM.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Edycja\Polprodukt.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Edycja\Surowce.aspx" />
+    <Content Include="Views\WydzialAdiustacji\E_mail\Nowy.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Gniazda\Obciazenie_gniazd.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Gniazda\OEE.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Gniazda\Planowanie.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Edycja\BOM.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Pracownicy\Badania_okresowe.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Pracownicy\Ewidencja_wyjsc.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Pracownicy\Karty_pracy.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Pracownicy\Wydajnosc.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Home.aspx" />
+    <Content Include="Views\WydzialAdiustacji\E_mail\Dyspozycja_DMiT.aspx" />
+    <Content Include="Views\WydzialAdiustacji\E_mail\Dyspozycja_DS.aspx" />
+    <Content Include="Views\WydzialAdiustacji\E_mail\Harmonogram_DT.aspx" />
+    <Content Include="Views\WydzialAdiustacji\E_mail\Zlecenie_DT.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Wysylki\Planowane.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Wysylki\Wykonane.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Zlecenia\Archiwalne.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Zlecenia\OEE.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Zlecenia\Proby_technologiczne.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Zlecenia\Raporty serii.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Zlecenia\Realizacja.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Zlecenia\Trwajace.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Zlecenia\WebForm1.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Zlecenia\Wszystkie.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Zlecenia\Zakonczone.aspx" />
+    <Content Include="Views\WydzialAdiustacji\Zlecenia\Zlecenie.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Wyloguj.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Content Include="EmailToAdmin.cs" />
+    <Content Include="App_code\DodajStatusZlecenia.cs" />
+    <Compile Include="LastLog.cs" />
+    <Compile Include="MasterPages\User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MyConnection.cs" />
+    <Compile Include="Test\ListView\Select.aspx.cs">
+      <DependentUpon>Select.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\ListView\Select.aspx.designer.cs">
+      <DependentUpon>Select.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Operacje\AjaxCallendar.aspx.cs">
+      <DependentUpon>AjaxCallendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Operacje\AjaxCallendar.aspx.designer.cs">
+      <DependentUpon>AjaxCallendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Operacje\GeneratorSerii.aspx.cs">
+      <DependentUpon>GeneratorSerii.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Operacje\GeneratorSerii.aspx.designer.cs">
+      <DependentUpon>GeneratorSerii.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Operacje\Kodowanie_hasel.aspx.cs">
+      <DependentUpon>Kodowanie_hasel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Operacje\Kodowanie_hasel.aspx.designer.cs">
+      <DependentUpon>Kodowanie_hasel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Operacje\OleToSql.aspx.cs">
+      <DependentUpon>OleToSql.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Operacje\OleToSql.aspx.designer.cs">
+      <DependentUpon>OleToSql.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Operacje\SurowiecInfo.cs" />
+    <Compile Include="Views\Admin\Operacje\Wydruk.aspx.cs">
+      <DependentUpon>Wydruk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Operacje\Wydruk.aspx.designer.cs">
+      <DependentUpon>Wydruk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Polprodukty\Specyfikacje.aspx.cs">
+      <DependentUpon>Specyfikacje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Polprodukty\Specyfikacje.aspx.designer.cs">
+      <DependentUpon>Specyfikacje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Surowce\Specyfikacje.aspx.cs">
+      <DependentUpon>Specyfikacje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Surowce\Specyfikacje.aspx.designer.cs">
+      <DependentUpon>Specyfikacje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Polprodukty\Analizy_polproduktow.aspx.cs">
+      <DependentUpon>Analizy_polproduktow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Polprodukty\Analizy_polproduktow.aspx.designer.cs">
+      <DependentUpon>Analizy_polproduktow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Polprodukty\Dodaj_analize.aspx.cs">
+      <DependentUpon>Dodaj_analize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Polprodukty\Dodaj_analize.aspx.designer.cs">
+      <DependentUpon>Dodaj_analize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Polprodukty\Lista indeksów.aspx.cs">
+      <DependentUpon>Lista indeksów.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Polprodukty\Lista indeksów.aspx.designer.cs">
+      <DependentUpon>Lista indeksów.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Polprodukty\Polprodukty.aspx.cs">
+      <DependentUpon>Polprodukty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Polprodukty\Polprodukty.aspx.designer.cs">
+      <DependentUpon>Polprodukty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Polprodukty\Specyfikacje.aspx.cs">
+      <DependentUpon>Specyfikacje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Polprodukty\Specyfikacje.aspx.designer.cs">
+      <DependentUpon>Specyfikacje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Pracownicy\Pracownicy.aspx.cs">
+      <DependentUpon>Pracownicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Pracownicy\Pracownicy.aspx.designer.cs">
+      <DependentUpon>Pracownicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Surowce\Analiza_edycja.aspx.cs">
+      <DependentUpon>Analiza_edycja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Surowce\Analiza_edycja.aspx.designer.cs">
+      <DependentUpon>Analiza_edycja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Surowce\Analiza_podglad.aspx.cs">
+      <DependentUpon>Analiza_podglad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Surowce\Analiza_podglad.aspx.designer.cs">
+      <DependentUpon>Analiza_podglad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Surowce\Analizy_surowcow.aspx.cs">
+      <DependentUpon>Analizy_surowcow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Surowce\Analizy_surowcow.aspx.designer.cs">
+      <DependentUpon>Analizy_surowcow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Surowce\Dodaj_alias.aspx.cs">
+      <DependentUpon>Dodaj_alias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Surowce\Dodaj_alias.aspx.designer.cs">
+      <DependentUpon>Dodaj_alias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Surowce\Dodaj_analize.aspx.cs">
+      <DependentUpon>Dodaj_analize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Surowce\Dodaj_analize.aspx.designer.cs">
+      <DependentUpon>Dodaj_analize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Surowce\Dodaj_indeks.aspx.cs">
+      <DependentUpon>Dodaj_indeks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Surowce\Dodaj_indeks.aspx.designer.cs">
+      <DependentUpon>Dodaj_indeks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Surowce\Lista indeksów.aspx.cs">
+      <DependentUpon>Lista indeksów.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Surowce\Lista indeksów.aspx.designer.cs">
+      <DependentUpon>Lista indeksów.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Surowce\Specyfikacje.aspx.cs">
+      <DependentUpon>Specyfikacje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Surowce\Specyfikacje.aspx.designer.cs">
+      <DependentUpon>Specyfikacje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Surowce\Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Surowce\Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\W_budowie.aspx.cs">
+      <DependentUpon>W_budowie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\W_budowie.aspx.designer.cs">
+      <DependentUpon>W_budowie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\User\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\User\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\E_mail\EmailToAdmin.cs" />
+    <Compile Include="Views\WydzialAdiustacji\E_mail\Nowy.aspx.cs">
+      <DependentUpon>Nowy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\E_mail\Nowy.aspx.designer.cs">
+      <DependentUpon>Nowy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\Archiwalne.aspx.cs">
+      <DependentUpon>Archiwalne.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\Archiwalne.aspx.designer.cs">
+      <DependentUpon>Archiwalne.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\OEE.aspx.cs">
+      <DependentUpon>OEE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\OEE.aspx.designer.cs">
+      <DependentUpon>OEE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\Proby_technologiczne.aspx.cs">
+      <DependentUpon>Proby_technologiczne.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\Proby_technologiczne.aspx.designer.cs">
+      <DependentUpon>Proby_technologiczne.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\Realizacja.aspx.cs">
+      <DependentUpon>Realizacja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\Realizacja.aspx.designer.cs">
+      <DependentUpon>Realizacja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\Zlecenie.aspx.cs">
+      <DependentUpon>Zlecenie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\Zlecenie.aspx.designer.cs">
+      <DependentUpon>Zlecenie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wyloguj.aspx.cs">
+      <DependentUpon>Wyloguj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wyloguj.aspx.designer.cs">
+      <DependentUpon>Wyloguj.aspx</DependentUpon>
+    </Compile>
+    <Content Include="DodajPracownika.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DodajPracownika.xsd</DependentUpon>
+    </Content>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ThumbViewerDemo\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\DzialKontroliJakosci.Master.cs">
+      <DependentUpon>DzialKontroliJakosci.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\DzialKontroliJakosci.Master.designer.cs">
+      <DependentUpon>DzialKontroliJakosci.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\DzialMagazynowITransportu.Master.cs">
+      <DependentUpon>DzialMagazynowITransportu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\DzialMagazynowITransportu.Master.designer.cs">
+      <DependentUpon>DzialMagazynowITransportu.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\MagazynSurowcowy.Master.cs">
+      <DependentUpon>MagazynSurowcowy.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\MagazynSurowcowy.Master.designer.cs">
+      <DependentUpon>MagazynSurowcowy.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\OddzialBialystok.Master.cs">
+      <DependentUpon>OddzialBialystok.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\OddzialBialystok.Master.designer.cs">
+      <DependentUpon>OddzialBialystok.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\WydzialAdiustacji.Master.cs">
+      <DependentUpon>WydzialAdiustacji.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\WydzialAdiustacji.Master.designer.cs">
+      <DependentUpon>WydzialAdiustacji.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MyCookie.cs" />
+    <Compile Include="MySession.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Gniazda\Gniazda.aspx.cs">
+      <DependentUpon>Gniazda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Gniazda\Gniazda.aspx.designer.cs">
+      <DependentUpon>Gniazda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Polprodukty\PolproduktParametr.aspx.cs">
+      <DependentUpon>PolproduktParametr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Polprodukty\PolproduktParametr.aspx.designer.cs">
+      <DependentUpon>PolproduktParametr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Polprodukty\Polprodukty.aspx.cs">
+      <DependentUpon>Polprodukty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Polprodukty\Polprodukty.aspx.designer.cs">
+      <DependentUpon>Polprodukty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Pracownicy\Pracownicy.aspx.cs">
+      <DependentUpon>Pracownicy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Pracownicy\Pracownicy.aspx.designer.cs">
+      <DependentUpon>Pracownicy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Surowce\Surowce.aspx.cs">
+      <DependentUpon>Surowce.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Surowce\Surowce.aspx.designer.cs">
+      <DependentUpon>Surowce.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Surowce\SurowiecParametr.aspx.cs">
+      <DependentUpon>SurowiecParametr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Surowce\SurowiecParametr.aspx.designer.cs">
+      <DependentUpon>SurowiecParametr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DzialKontroliJakosci\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DzialMagazynowITransportu\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DzialMagazynowITransportu\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MagazynSurowcowy\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MagazynSurowcowy\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OddzialBialystok\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\OddzialBialystok\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Analizy_laboratoryjne\Polprodukty\Analizy_koncowe.aspx.cs">
+      <DependentUpon>Analizy_koncowe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Analizy_laboratoryjne\Polprodukty\Analizy_koncowe.aspx.designer.cs">
+      <DependentUpon>Analizy_koncowe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Analizy_laboratoryjne\Polprodukty\Analizy_techniczne.aspx.cs">
+      <DependentUpon>Analizy_techniczne.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Analizy_laboratoryjne\Polprodukty\Analizy_techniczne.aspx.designer.cs">
+      <DependentUpon>Analizy_techniczne.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Analizy_laboratoryjne\Surowce\Analizy_koncowe.aspx.cs">
+      <DependentUpon>Analizy_koncowe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Analizy_laboratoryjne\Surowce\Analizy_koncowe.aspx.designer.cs">
+      <DependentUpon>Analizy_koncowe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Analizy_laboratoryjne\Surowce\Analizy_techniczne.aspx.cs">
+      <DependentUpon>Analizy_techniczne.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Analizy_laboratoryjne\Surowce\Analizy_techniczne.aspx.designer.cs">
+      <DependentUpon>Analizy_techniczne.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Polprodukty\PolproduktBOM.aspx.cs">
+      <DependentUpon>PolproduktBOM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Polprodukty\PolproduktBOM.aspx.designer.cs">
+      <DependentUpon>PolproduktBOM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Edycja\Polprodukt.aspx.cs">
+      <DependentUpon>Polprodukt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Edycja\Polprodukt.aspx.designer.cs">
+      <DependentUpon>Polprodukt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Edycja\Surowce.aspx.cs">
+      <DependentUpon>Surowce.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Edycja\Surowce.aspx.designer.cs">
+      <DependentUpon>Surowce.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Gniazda\Obciazenie_gniazd.aspx.cs">
+      <DependentUpon>Obciazenie_gniazd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Gniazda\Obciazenie_gniazd.aspx.designer.cs">
+      <DependentUpon>Obciazenie_gniazd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Gniazda\OEE.aspx.cs">
+      <DependentUpon>OEE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Gniazda\OEE.aspx.designer.cs">
+      <DependentUpon>OEE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Gniazda\Planowanie.aspx.cs">
+      <DependentUpon>Planowanie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Gniazda\Planowanie.aspx.designer.cs">
+      <DependentUpon>Planowanie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Edycja\BOM.aspx.cs">
+      <DependentUpon>BOM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Edycja\BOM.aspx.designer.cs">
+      <DependentUpon>BOM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Pracownicy\Badania_okresowe.aspx.cs">
+      <DependentUpon>Badania_okresowe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Pracownicy\Badania_okresowe.aspx.designer.cs">
+      <DependentUpon>Badania_okresowe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Pracownicy\Ewidencja_wyjsc.aspx.cs">
+      <DependentUpon>Ewidencja_wyjsc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Pracownicy\Ewidencja_wyjsc.aspx.designer.cs">
+      <DependentUpon>Ewidencja_wyjsc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Pracownicy\Karty_pracy.aspx.cs">
+      <DependentUpon>Karty_pracy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Pracownicy\Karty_pracy.aspx.designer.cs">
+      <DependentUpon>Karty_pracy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Pracownicy\Wydajnosc.aspx.cs">
+      <DependentUpon>Wydajnosc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Pracownicy\Wydajnosc.aspx.designer.cs">
+      <DependentUpon>Wydajnosc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\E_mail\Dyspozycja_DMiT.aspx.cs">
+      <DependentUpon>Dyspozycja_DMiT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\E_mail\Dyspozycja_DMiT.aspx.designer.cs">
+      <DependentUpon>Dyspozycja_DMiT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\E_mail\Dyspozycja_DS.aspx.cs">
+      <DependentUpon>Dyspozycja_DS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\E_mail\Dyspozycja_DS.aspx.designer.cs">
+      <DependentUpon>Dyspozycja_DS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\E_mail\Harmonogram_DT.aspx.cs">
+      <DependentUpon>Harmonogram_DT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\E_mail\Harmonogram_DT.aspx.designer.cs">
+      <DependentUpon>Harmonogram_DT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\E_mail\Zlecenie_DT.aspx.cs">
+      <DependentUpon>Zlecenie_DT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\E_mail\Zlecenie_DT.aspx.designer.cs">
+      <DependentUpon>Zlecenie_DT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Wysylki\Planowane.aspx.cs">
+      <DependentUpon>Planowane.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Wysylki\Planowane.aspx.designer.cs">
+      <DependentUpon>Planowane.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Wysylki\Wykonane.aspx.cs">
+      <DependentUpon>Wykonane.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Wysylki\Wykonane.aspx.designer.cs">
+      <DependentUpon>Wykonane.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\Raporty serii.aspx.cs">
+      <DependentUpon>Raporty serii.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\Raporty serii.aspx.designer.cs">
+      <DependentUpon>Raporty serii.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\Trwajace.aspx.cs">
+      <DependentUpon>Trwajace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\Trwajace.aspx.designer.cs">
+      <DependentUpon>Trwajace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\Wszystkie.aspx.cs">
+      <DependentUpon>Wszystkie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\Wszystkie.aspx.designer.cs">
+      <DependentUpon>Wszystkie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\Zakonczone.aspx.cs">
+      <DependentUpon>Zakonczone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\WydzialAdiustacji\Zlecenia\Zakonczone.aspx.designer.cs">
+      <DependentUpon>Zakonczone.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\MagazynSurowcowy.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\WydzialAdiustacji.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\DzialMagazynowITransportu.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\DzialKontroliJakosci.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\OddzialBialystok.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\Admin\" />
+    <Folder Include="Scripts\DzialKontroliJakosci\" />
+    <Folder Include="Scripts\DzialMagazynowITransportu\" />
+    <Folder Include="Scripts\MagazynSurowcowy\" />
+    <Folder Include="Scripts\OddzialBialystok\" />
+    <Folder Include="Scripts\User\" />
+    <Folder Include="Styles\Admin\" />
+    <Folder Include="Styles\DzialKontroliJakosci\" />
+    <Folder Include="Styles\DzialMagazynowITransportu\" />
+    <Folder Include="Styles\MagazynSurowcowy\" />
+    <Folder Include="Styles\OddzialBialystok\" />
+    <Folder Include="Styles\User\" />
+    <Folder Include="Views\Admin\Wydzialy\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DodajPracownika.xsc">
+      <DependentUpon>DodajPracownika.xsd</DependentUpon>
+    </None>
+    <None Include="DodajPracownika.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DodajPracownika.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DodajPracownika.xss">
+      <DependentUpon>DodajPracownika.xsd</DependentUpon>
+    </None>
+    <Content Include="Sitemap\HLOB.sitemap" />
+    <Content Include="MasterPages\Admin.Master" />
+    <None Include="Extensions\ThumbViewerDemo\images\Thumbs.db" />
+    <Content Include="Extensions\ThumbViewerDemo\Web.Config" />
+    <Content Include="MasterPages\User.Master" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53159</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

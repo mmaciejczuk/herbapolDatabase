@@ -1,0 +1,136 @@
+﻿        .CalendarCSS  
+        {  
+            background-color:#99ccff;  
+            color:Black;  
+            }  
+            
+        .section{
+         float:left;
+         margin-right:50px;
+         margin-top:10px;
+         margin-bottom:10px;
+         margin-left:5px;
+         }
+         
+         #wrapper{
+         }
+         
+        .DetailsViewClass
+        {
+            font-family: verdana,arial,sans-serif;
+            font-size: 11px;
+            color: #333333;
+            border-width: 1px;
+            border-color: #999999;
+            border-collapse: collapse;
+            border-style: solid;
+        }
+        .Header
+        {
+            background: #b5cfd2;
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #999999;
+        }
+        .Foter
+        {
+            background: #dcddc0;
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #999999;
+        }
+        .btn
+        {
+            background: #ffffff;
+            border-width: 1px;
+            padding: 2px;
+            border-style: solid;
+            border-color: #999999;
+            font-family: verdana,arial,sans-serif;
+            font-size: 11px;
+        }
+        .textbox
+        {
+            border-width: 1px;
+            padding: 1px;
+            border-style: solid;
+            border-color: #999999;
+            font-family: verdana,arial,sans-serif;
+            font-size: 11px;
+            width: 100px;
+        }
+        .style1
+        {
+            width: 100%;
+        }
+        .style3
+        {
+            font-size: small;
+            color: #003300;
+        }
+        .cpHeader
+        {
+            color: black;
+            background-color: #cccc99;
+            font: bold 11px auto "Trebuchet MS", Verdana;
+            font-size: 12px;
+            cursor: pointer;
+            width:900px;
+            height:15px;
+            padding: 4px;            
+        }
+        .cpBody
+        {
+            background-color: #EEEEEE;
+            font: normal 14px auto Verdana, Arial;
+            border: 1px gray;                
+            width:900px;            
+            padding: 4px;
+            padding-top: 2px;
+            height:0px;
+            overflow: hidden; 
+        }
+        .cpHeaderOEE
+        {
+            color: black;
+            background-color: #cccc99;
+            font: bold 11px auto "Trebuchet MS", Verdana;
+            font-size: 12px;
+            cursor: pointer;
+            width:600px;
+            height:15px;
+            padding: 4px;   
+            margin-top:20px;         
+        }
+        .cpBodyOEE
+        {
+            background-color: #EEEEEE;
+            font: normal 14px auto Verdana, Arial;
+            font-style:italic;
+            border: 1px gray;                
+            width:600px;            
+            padding: 4px;
+            padding-top: 2px;
+            height:0px;
+            overflow: hidden; 
+        }
+        .naglowkiClass {
+            font-style:italic;
+            font: 12px auto "Trebuchet MS", Verdana;
+        }
+        .naglowkiClass2 {
+            font-style:italic;
+            font: 12px auto "Trebuchet MS", Verdana;
+        }
+        .labeleRaportyClass {
+            font-style:italic;
+            color: darkgreen;
+            font: 13px auto "Trebuchet MS", Verdana;
+        }
+        .labeleRaportyClass {
+            font-style:italic;
+            color: darkgreen;
+            font: 13px auto "Trebuchet MS", Verdana;
+        }

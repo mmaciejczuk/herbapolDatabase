@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DzialKontroliJakosci.master.cs" Inherits="HLOB2.MasterPages.DzialKontroliJakosci" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/DzialKontroliJakosci.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    Laboratorium Kontrolne HLOB
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:Label ID="Label1" runat="server" ForeColor="#FFFF99" Text="Label"></asp:Label>
+                <br />
+                <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="#99FF99" 
+                    Font-Size="12px">LinkButton</asp:LinkButton>  
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem Text="Półprodukty">
+                            <asp:MenuItem NavigateUrl="~/Views/DzialKontroliJakosci/Polprodukty/Lista indeksów.aspx" 
+                                Text="Indeksy" Value="Indeksy"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Views/DzialKontroliJakosci/Polprodukty/Specyfikacje.aspx" 
+                                Text="Specyfikacje" Value="Specyfikacje"></asp:MenuItem>
+                            <asp:MenuItem Text="Analizy" Value="Analizy" 
+                                
+                                NavigateUrl="~/Views/DzialKontroliJakosci/Polprodukty/Analizy_polproduktow.aspx">
+                                <asp:MenuItem NavigateUrl="~/Views/DzialKontroliJakosci/Polprodukty/Dodaj_analize.aspx" 
+                                    Text="Dodaj analizę" Value="Dodaj analizę"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Surowce">
+                            <asp:MenuItem NavigateUrl="~/Views/DzialKontroliJakosci/Surowce/Lista indeksów.aspx" 
+                                Text="Indeksy" Value="Indeksy">
+                                <asp:MenuItem Text="Dodaj indeks" Value="Dodaj indeks" 
+                                    NavigateUrl="~/Views/DzialKontroliJakosci/Surowce/Dodaj_indeks.aspx"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Views/DzialKontroliJakosci/Surowce/Dodaj_alias.aspx" 
+                                    Text="Dodaj alias" Value="Dodaj alias"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Specyfikacje" Value="Specyfikacje" 
+                                NavigateUrl="~/Views/DzialKontroliJakosci/Surowce/Specyfikacje.aspx">
+                                <asp:MenuItem Text="Dodaj specyfikację" Value="Dodaj specyfikację">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Views/DzialKontroliJakosci/Surowce/Analizy_surowcow.aspx" 
+                                Text="Analizy" Value="Analizy">
+                                <asp:MenuItem NavigateUrl="~/Views/DzialKontroliJakosci/Surowce/Dodaj_analize.aspx" 
+                                    Text="Dodaj analizę" Value="Dodaj analizę"></asp:MenuItem>
+                                <asp:MenuItem Text="Archiwum" Value="Archiwum"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Pracownicy" Value="Pracownicy">
+                            <asp:MenuItem Text="Karty pracy" Value="Karty pracy" 
+                                NavigateUrl="~/Views/DzialKontroliJakosci/W_budowie.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Ewidencja wyjść" Value="Ewidencja wyjść" 
+                                NavigateUrl="~/Views/DzialKontroliJakosci/W_budowie.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Badania okresowe" Value="Badania okresowe" 
+                                NavigateUrl="~/Views/DzialKontroliJakosci/W_budowie.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>

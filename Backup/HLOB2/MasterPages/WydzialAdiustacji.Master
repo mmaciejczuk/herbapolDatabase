@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WydzialAdiustacji.master.cs" Inherits="HLOB2.MasterPages.WydzialAdiustacji" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/WydzialAdiustacji.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    Wydział Adiustacji
+                </h1>
+            </div>
+            <div class="loginDisplay">
+               <asp:Label ID="Label1" runat="server" ForeColor="#FFFF99" Text="Label"></asp:Label>
+                <br />
+                <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="#99FF99" 
+                    Font-Size="12px">LinkButton</asp:LinkButton>  
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" 
+                    EnableViewState="False" IncludeStyleBlock="False" Orientation="Horizontal" 
+                    BackColor="#009900" DynamicHorizontalOffset="2" Font-Names="Verdana" 
+                    Font-Size="0.8em" ForeColor="#99CC00" StaticSubMenuIndent="10px">
+                    <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <DynamicMenuStyle BackColor="#E3EAEB" />
+                    <DynamicSelectedStyle BackColor="#1C5E55" />
+                    <Items>
+                        <asp:MenuItem Text="Zlecenia">
+                            <asp:MenuItem Text="Wszystkie" Value="Wszystkie" 
+                                NavigateUrl="~/Views/WydzialAdiustacji/Zlecenia/Wszystkie.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Zakończone" Value="Zakończone"></asp:MenuItem>
+                            <asp:MenuItem Text="Trwające" Value="Trwające">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Views/WydzialAdiustacji/Zlecenia/Proby_technologiczne.aspx" 
+                                Text="Próby technologiczne" Value="Próby technologiczne"></asp:MenuItem>
+                            <asp:MenuItem Text="Raporty serii" Value="Raporty serii"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Views/WydzialAdiustacji/Zlecenia/Archiwalne.aspx" 
+                                Text="Archiwalne" Value="Archiwalne"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Analizy laboratoryjne" Value="Analizy laboratoryjne">
+                            <asp:MenuItem Text="Półprodukty" Value="Półprodukty">
+                                <asp:MenuItem Text="Techniczne" Value="Techniczne"></asp:MenuItem>
+                                <asp:MenuItem Text="Końcowe" Value="Końcowe"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Surowce" Value="Surowce">
+                                <asp:MenuItem Text="Techniczne" Value="Techniczne"></asp:MenuItem>
+                                <asp:MenuItem Text="Końcowe" Value="Końcowe"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Gniazda" Value="Gniazda">
+                            <asp:MenuItem Text="Planowanie" Value="Planowanie"></asp:MenuItem>
+                            <asp:MenuItem Text="OEE" Value="OEE"></asp:MenuItem>
+                            <asp:MenuItem Text="Obciążenie gniazd" Value="Obciążenie gniazd"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Wysyłki" Value="Edycja tabel">
+                            <asp:MenuItem Text="Planowane" Value="Planowane"></asp:MenuItem>
+                            <asp:MenuItem Text="Wykonane" Value="Wykonane"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="E-mail" Value="Wyślij">
+                            <asp:MenuItem Text="Nowy e-mail" Value="Nowy e-mail" 
+                                NavigateUrl="~/Views/WydzialAdiustacji/E_mail/Nowy.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Pracownicy">
+                            <asp:MenuItem Text="Wydajność" Value="Wydajność"></asp:MenuItem>
+                            <asp:MenuItem Text="Karty pracy" Value="Karty pracy"></asp:MenuItem>
+                            <asp:MenuItem Text="Ewidencja wyjść" Value="Ewidencja wyjść"></asp:MenuItem>
+                            <asp:MenuItem Text="Badania okresowe" Value="Badania okresowe"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Edycja" Value="Edycja">
+                            <asp:MenuItem Text="Półprodukty" Value="Półprodukty" 
+                                NavigateUrl="~/Views/WydzialAdiustacji/Edycja/Polprodukt.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Views/WydzialAdiustacji/Edycja/Surowce.aspx" 
+                                Text="Surowce" Value="Surowce"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Views/WydzialAdiustacji/Edycja/BOM.aspx" 
+                                Text="BOM" Value="BOM"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="#666666" ForeColor="White" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <StaticSelectedStyle BackColor="#1C5E55" />
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>

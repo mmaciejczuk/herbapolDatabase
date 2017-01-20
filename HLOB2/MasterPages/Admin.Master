@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="HLOB2.MasterPages.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Admin.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+   
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/Administrator.gif" 
+                        Height="50px" />
+                    </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:Label ID="Label1" runat="server" ForeColor="#FFFF99" Text="Label"></asp:Label>
+                <br />
+                <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="#99FF99" 
+                    Font-Size="12px">LinkButton</asp:LinkButton>                             
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Półprodukty">
+                            <asp:MenuItem Text="Półprodukty" Value="Półprodukty" 
+                                NavigateUrl="~/Views/Admin/Polprodukty/Polprodukty.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Operacja" Value="Operacja"></asp:MenuItem>
+                            <asp:MenuItem Text="Parametr" Value="Parametr"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Views/Admin/Polprodukty/Specyfikacje.aspx" 
+                                Text="Specyfikacje" Value="Specyfikacje"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="Surowce">
+                            <asp:MenuItem Text="Surowiec" Value="Surowiec" 
+                                NavigateUrl="~/Views/Admin/Surowce/Surowce.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Operacja" Value="Operacja"></asp:MenuItem>
+                            <asp:MenuItem Text="Parametr" Value="Parametr"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Views/Admin/Surowce/Specyfikacje.aspx" 
+                                Text="Specyfikacje" Value="Specyfikacje"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Gniazda" Value="Gniazda">
+                            <asp:MenuItem Text="Gniazdo" Value="Gniazdo"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Wydziały" Value="Wydziały">
+                            <asp:MenuItem Text="Wydział" Value="Wydział"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Pracownicy" Value="Karty pracowników">
+                            <asp:MenuItem Text="Pracownik" Value="Pracownik"></asp:MenuItem>
+                            <asp:MenuItem Text="Karty pracowników" Value="Karty pracowników"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Operacje" Value="Operacje">
+                            <asp:MenuItem NavigateUrl="~/Views/Admin/Operacje/Kodowanie_hasel.aspx" 
+                                Text="Kodowanie haseł" Value="Kodowanie haseł"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Views/Admin/Operacje/GeneratorSerii.aspx" 
+                                Text="Generator serii" Value="Generator serii"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Views/Admin/Operacje/DetailsViewExamples.aspx" 
+                                Text="DetailsView Example" Value="DetailsView Example"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Views/Admin/Operacje/AjaxCallendar.aspx" 
+                                Text="AjaxCallendar" Value="AjaxCallendar"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Views/Admin/Operacje/ProgressBar.htm" 
+                                Text="ProgressBar" Value="ProgressBar"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+    </div>
+    </form>
+</body>
+</html>

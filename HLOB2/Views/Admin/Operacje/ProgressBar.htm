@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+
+ <style>
+    #progressbar1, #progressbar2, #progressbar3, #progressbar4
+    {
+      width:100px;
+      padding:1px;
+      background-color:white;
+      border:1px solid black;
+      height:14px;  
+      float:left;
+      vertical-align:top;
+    }
+
+    #indicator1, #indicator2, #indicator3, #indicator4  
+    {
+      width:0px;
+      height:14px;
+      margin:0;
+    }
+    #indicator1
+    {
+      background-image:url("/Images/OEE_paski/shaded-blue2-half.png");
+    }
+    #indicator2
+    {
+      background-image:url("/Images/OEE_paski/shaded-yellow-half.png");
+    }
+    #indicator3
+    {
+      background-image:url("/Images/OEE_paski/shaded-green2-half.png");
+    }
+    #indicator4
+    {
+      background-image:url("/Images/OEE_paski/shaded-fiolet-half.png");
+    }
+
+    #progressnum1, #progressnum2, #progressnum3, #progressnum4
+    {
+      text-align:center;
+      font-family: Tahoma; 
+      width:25px;
+      height:15px;
+      font-size: 14px;
+      float:left;
+      vertical-align:bottom;
+    }
+
+    .labels
+    {
+      float:left;
+      vertical-align:top;
+      width: 100px;
+    }
+    
+ </style> 
+  <script>
+
+      var maxprogress = 10;   // total to reach
+      var actualprogress = 0;  // current value
+      var itv = 0;  // id to setinterval
+      function prog() {
+          if (actualprogress >= maxprogress) {
+              clearInterval(itv);
+              return;
+          }
+          var progressnum = document.getElementById("progressnum1");
+          var indicator = document.getElementById("indicator1");
+          actualprogress += 1;
+          indicator.style.width = actualprogress + "px";
+          progressnum.innerHTML = actualprogress;
+          if (actualprogress == maxprogress) clearInterval(itv);
+      }
+
+      var maxprogress2 = 98;   // total to reach
+      var actualprogress2 = 0;  // current value
+      var itv2 = 0;  // id to setinterval
+      function prog2() {
+          if (actualprogress2 >= maxprogress2) {
+              clearInterval(itv);
+              return;
+          }
+          var progressnum2 = document.getElementById("progressnum2");
+          var indicator2 = document.getElementById("indicator2");
+          actualprogress2 += 1;
+          indicator2.style.width = actualprogress2 + "px";
+          progressnum2.innerHTML = actualprogress2;
+          if (actualprogress2 == maxprogress2) clearInterval(itv);
+      }
+
+      var maxprogress3 = 78;   // total to reach
+      var actualprogress3 = 0;  // current value
+      var itv3 = 0;  // id to setinterval
+      function prog3() {
+          if (actualprogress3 >= maxprogress3) {
+              clearInterval(itv);
+              return;
+          }
+          var progressnum3 = document.getElementById("progressnum3");
+          var indicator3 = document.getElementById("indicator3");
+          actualprogress3 += 1;
+          indicator3.style.width = actualprogress3 + "px";
+          progressnum3.innerHTML = actualprogress3;
+          if (actualprogress3 == maxprogress3) clearInterval(itv);
+      }
+
+      var maxprogress4 = 9;   // total to reach
+      var actualprogress4 = 0;  // current value
+      var itv4 = 0;  // id to setinterval
+      function prog4() {
+          if (actualprogress4 >= maxprogress4) {
+              clearInterval(itv);
+              return;
+          }
+          var progressnum4 = document.getElementById("progressnum4");
+          var indicator4 = document.getElementById("indicator4");
+          actualprogress4 += 1;
+          indicator4.style.width = actualprogress4 + "px";
+          progressnum4.innerHTML = actualprogress4;
+          if (actualprogress4 == maxprogress4) clearInterval(itv);
+      }
+
+      window.onload = (itv = setInterval(prog, 1));
+      window.onload = (itv2 = setInterval(prog2, 1));
+      window.onload = (itv3 = setInterval(prog3, 5));
+      window.onload = (itv4 = setInterval(prog4, 5));
+
+  </script>
+</head>
+<body>
+<div class="labels">Dostêpnoœæ&nbsp; (I)</div>
+<div id="progressbar1">
+    <div id="indicator1"></div>
+    </div>
+<div id="progressnum1">0
+    </div>
+<br />
+
+<div class="labels">Wydajnoœæ (M)</div>
+<div id="progressbar2">
+    <div id="indicator2"></div>
+    </div>
+<div id="progressnum2">0
+    </div>
+<br />
+
+<div class="labels">Jakoœæ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (O)</div>
+<div id="progressbar3">
+    <div id="indicator3"></div>
+    </div>
+<div id="progressnum3">0
+    </div>
+<br />
+
+<div class="labels">OEE&nbsp;&nbsp; (IxMxO)</div>
+<div id="progressbar4">
+    <div id="indicator4"></div>
+    </div>
+<div id="progressnum4">0
+    </div>
+
+<!--<input type="button" name="Submit" value="Start the progression"
+    onclick="itv = setInterval(prog, 5)" />-->
+<!--<input type="button" name="Submit" value="Stop"
+    onclick="clearInterval(itv)" />-->
+
+</body>
+</html>
